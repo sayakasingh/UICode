@@ -1,0 +1,147 @@
+    body {
+    font-family: calibri;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.parent-div {
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0 0 52px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    text-align: center;
+}
+
+
+.offer-box {
+    margin-bottom: 20px;
+}
+
+.offer {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+.discount {
+    background-color: #ff6699;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 49px;
+    width: 45px;
+    font-weight: bold;
+    line-height: 23px;
+  
+}
+
+.details {
+    margin-left: 60px;
+    text-align: left;
+}
+
+.details input[type="radio"] {
+    margin-right: 10px;
+    background-color: red;
+}
+
+.price {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    margin-left: 18%;
+}
+
+.most-popular {
+    
+    color: #ff6699;
+    border-radius: 5px;
+    padding: 3px 6px;
+    font-size: 12px;
+    float: right;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.active {
+    border-color: #ff6699;
+}
+
+.options {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.option select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 45%;
+}
+
+.footer {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-btn {
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+    width: 100%;
+}
+
+.my-offer{
+    background-color:#ff6699;
+    font-size: 10px;
+    color: white;
+    padding: 2%;
+    margin: 10px;
+}
+
+.powered-by {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 10px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+h1 {
+    color: #ff6699;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}

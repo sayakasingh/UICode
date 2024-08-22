@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcom to BOGO</title>
+    <link rel="stylesheet" type="text/css" href="style-main.css">
+</head>
+<body>
+    <div class="parent-div">
+        <h1>YAY! It's BOGO</h1>
+        
+        <div class="offer-box">
+            <div class="offer">
+                <div class="discount">30% Off</div>
+                <div class="details">
+                    <input type="radio" name="offer" id="offer1" onclick="SwitchOffers(1)">
+                    <label for="offer1">Buy 1 Get 2</label>
+                    <span class="price">$18.00 USD</span>
+                </div>
+                <div class="options" id="options1">
+                    <div class="option">
+                        <label>#1</label>
+                        <select>
+                            <option value="s">S</option>
+                            <option value="l">L</option>
+                            <option value="m">M</option>
+                        </select>
+                        <select>
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Blue</option>
+                        </select>
+                    </div>
+                    <div class="option">
+                        <label>#2</label>
+                        <select>
+                           <option value="s">S</option>
+                            <option value="l">L</option>
+                            <option value="m">M</option>
+                        </select>
+                        <select>
+                            <option>Colour</option>
+                            <option>Black</option>
+                            <option>White</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="offer">
+                <div class="discount">30% Off</div>
+                <div class="details">
+                    <input type="radio" name="offer" id="offer2" onclick="SwitchOffers(2)">
+                    <label for="offer2">Buy 2 Get 4</label>
+                    <span class="most-popular">Most Popular</span>
+                    <span class="price">$24.00 USD</span>
+
+                </div>
+
+                <div class="options" id="options2">
+                    <div class="option">
+                        <label>#1</label>
+                        <select>
+                            <option value="s">S</option>
+                            <option value="l">L</option>
+                            <option value="m">M</option>
+                        </select>
+                        <select>
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Blue</option>
+                        </select>
+                    </div>
+                    <div class="option">
+                        <label>#2</label>
+                        <select>
+                            <option value="s">S</option>
+                            <option value="l">L</option>
+                            <option value="m">M</option>
+                        </select>
+                        <select>
+                            <option>Colour</option>
+                            <option>Black</option>
+                            <option>White</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="offer active">
+                <div class="discount">30% Off</div>
+                <div class="details">
+                    <input type="radio" name="offer" id="offer3" checked onclick="SwitchOffers(3)">
+                    <label for="offer3">Buy 3 Get 6<span class="my-offer">10% Off</span></label>
+                    <span class="price">$36.00 USD <span class="old-price">$10.00 USD</span></span>
+                </div>
+                <div class="options" id="options3">
+                    <div class="option">
+                        <label>#1</label>
+                        <select>
+                            <option value="s">S</option>
+                            <option value="l">L</option>
+                            <option value="m">M</option>
+                        </select>
+                        <select>
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Blue</option>
+                        </select>
+                    </div>
+                    <div class="option">
+                        <label>#2</label>
+                        <select>
+                            <option value="s">S</option>
+                            <option value="l">L</option>
+                            <option value="m">M</option>
+                        </select>
+                        <select>
+                            <option>Colour</option>
+                            <option>Black</option>
+                            <option>White</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span style="color:#ff6699;">Free Delivery</span>
+            <span class="bold">Total: $18.00 USD</span>
+        </div>
+        
+        <button class="cart-btn">+Add to Cart</button>
+        <p class="powered-by">Powered by <span style="color:#ff6699;">Pumper</span></p>
+    </div>
+
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const radios = document.querySelectorAll('input[name="offer"]');
+        function SwitchOffers() {
+            radios.forEach(radio => {
+                const offerBox = radio.closest('.offer');
+                const options = offerBox.querySelector('.options');
+                const discount = offerBox.querySelector('.discount');
+                if (radio.checked) {
+                    options.style.display = 'block';
+                    discount.style.display = 'none';
+                } else {
+                    options.style.display = 'none';
+                    discount.style.display = 'block';
+                }
+            });
+        }
+        radios.forEach(radio => {
+            radio.addEventListener('change', SwitchOffers);
+        });
+        
+        
+        SwitchOffers();
+    });
+</script>
+
+
+</body>
+</html>
